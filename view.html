@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
+    <link rel="stylesheet" href="/Virtual-Herbal-Garden/api.js">
     <link rel="stylesheet" href="/Virtual-Herbal-Garden/style.css">
 </head>
 <body>
@@ -16,10 +17,6 @@
     <!-- Navigation Menu -->
     <body>
 
-        <!-- Header -->
-        <header>
-            <h1>Plants and their medical uses</h1>
-        </header>
     
         <!-- Navigation Menu -->
         <nav>
@@ -33,10 +30,33 @@
             <a href="#betel"> Betal</a>
         </nav>
     
+
+        <input type="text" id="userQuery" placeholder="Ask about a medicinal plant...">
+<button onclick="askBot()">Ask</button>
+<p id="botResponse"></p>
+
+<script>
+async function askBot() {
+    let query = document.getElementById("userQuery").value;
+    let response = await fetch("/ask-bot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+    });
+    let data = await response.json();
+    document.getElementById("botResponse").innerText = data.answer;
+}
+</script>
+
        <!-- neem tree -->
         <div id="neem">
             <!-- <div> -->
-                <img src="/Virtual-Herbal-Garden/neem tree.jpg" alt="Neem Tree" >
+                <iframe title="3D Plant Model"
+        
+        src="https://sketchfab.com/models/03edef8009d942d3a3db6fa64cecbe56/embed"
+        frameborder="0"
+        allow="autoplay; fullscreen; vr"></iframe>
+                <!-- <img src="/Virtual-Herbal-Garden/neem tree.jpg" alt="Neem Tree" > -->
             <!-- </div> -->
                 <ul>
                     <h2><u><i>Neem tree</u></i></h2>

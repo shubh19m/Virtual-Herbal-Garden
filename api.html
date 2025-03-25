@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link rel="stylesheet" href="/Virtual-Herbal-Garden/api.js">
+    <link rel="stylesheet" href="/Virtual-Herbal-Garden/style.css">
+</head>
+<header>
+    <h1>Welcome to the Virtual Herbal Garden</h1>
+</header>
+<input type="text" id="userQuery" placeholder="Ask about a medicinal plant...">
+<button onclick="askBot()">Ask</button>
+<p id="botResponse"></p>
+
+<script>
+async function askBot() {
+    let query = document.getElementById("userQuery").value;
+    let response = await fetch("/ask-bot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+    });
+    let data = await response.json();
+    document.getElementById("botResponse").innerText = data.answer;
+}
+</script>
+
+</html>
