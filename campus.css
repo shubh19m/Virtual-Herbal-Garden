@@ -50,3 +50,6 @@ div{
 p{
     font-size: large;
 }
+a{
+    text-decoration: none;
+}
