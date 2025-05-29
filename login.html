@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Virtual Herbal Garden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Virtual-Herbal-Garden/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome Back!</h1>
+    </header>
+    <nav>
+        <a href="/Virtual-Herbal-Garden/index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="/Virtual-Herbal-Garden/campus.html">Plants</a>
+        <a href="/Virtual-Herbal-Garden/view.html">Explore</a>
+        </nav>
+
+    <main class="container">
+        <section class="login-section content">
+            <h2>User Login</h2>
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="username_email">Username or Email:</label>
+                    <input type="text" id="username_email" name="username_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+                <div class="form-links">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <span>|</span>
+                    <a href="#" class="register-link">Don't have an account? Sign Up!</a>
+                </div>
+                <p id="login-message" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Virtual Herbal Garden &copy; 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="/Virtual-Herbal-Garden/script.js"></script>
+</body>
+</html>

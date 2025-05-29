@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Herbal Garden</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Virtual-Herbal-Garden/style.css">
 </head>
  <body>
@@ -15,12 +20,13 @@
 
     <!-- Navigation Menu -->
     <nav>
-        <a href="#home">Home</a>
+        <a href="#home"><i class="fa-solid fa-house"></i></a>
         <a href="/Virtual-Herbal-Garden/view.html">Explore</a>
         <a href="/Virtual-Herbal-Garden/campus.html">Campus</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#References">References</a>
+         <a href="/Virtual-Herbal-Garden/login.html">Login</a> </nav>
     </nav>
 
     <!-- Home Section -->
@@ -36,6 +42,27 @@
         </ul>
         
     </section>
+     <main class="container">
+        <section id="home" class="content">
+            <h2>Discover the Wonders of Medicinal Plants</h2>
+            <p>Welcome to the Virtual Herbal Garden, your digital gateway to the incredible world of medicinal plants. Explore a rich database of herbs, learn about their traditional uses, scientific properties, and much more.</p>
+            <p>Our mission is to bridge ancient wisdom with modern knowledge, providing a comprehensive resource for students, researchers, and enthusiasts alike.</p>
+            <p>Dive in and start your botanical journey today!</p>
+        </section>
+
+        <section id="plant-of-the-day" class="content">
+            <p>Loading Plant of the Day...</p>
+        </section>
+
+        <section id="my-bookmarks" class="content">
+            <h2>My Bookmarks</h2>
+            <div id="my-bookmarks-list" class="plant-grid">
+                <p class="no-bookmarks">You have no bookmarked plants yet. Bookmark plants from the "Campus" page!</p>
+            </div>
+        </section>
+
+
+        </main>
     <!-- <section id="view" class="container content">
 
     </section> -->
@@ -53,6 +80,7 @@
             <li>AYUSH Focused: Emphasizing traditional healing systems and their medicinal plants.</li>
         </ul>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="container content">
@@ -100,6 +128,6 @@
         <p style="text-align: center;">Virtual Herbal Garden</p>
        <!-- <p>&copy; 2024 Virtual Herbal Garden. All rights reserved.</p> -->
     </footer>
-
+  <script src="/Virtual-Herbal-Garden/script.js"></script>
 </body>
 </html>

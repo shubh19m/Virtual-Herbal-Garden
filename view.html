@@ -4,217 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore</title>
-    <link rel="stylesheet" href="/Virtual-Herbal-Garden/api.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Virtual-Herbal-Garden/style.css">
-</head>
+    <link rel="stylesheet" href="/Virtual-Herbal-Garden/campus.css"> </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>Plants and their medical uses</h1>
     </header>
 
-    <!-- Navigation Menu -->
-    <body>
-
+    <nav>
+        <a href="/Virtual-Herbal-Garden/index.html"><i class="fa-solid fa-house"></i></a>
+        <a href="#neem"> Neem Tree</a>
+        <a href="#tulsi"> Tulsi</a>
+        <a href="#aloe"> Aloe Vera</a>
+        <a href="#mint"> Peppermint</a>
+        <a href="#grass"> Lemon Grass</a>
+        <a href="#basil"> Basil</a>
+        <a href="#betel"> Betal</a>
+    </nav>
     
-        <!-- Navigation Menu -->
-        <nav>
-            <a href="/Virtual-Herbal-Garden/index.html">Home</a>
-            <a href="#neem"> Neem Tree</a>
-            <a href="#tulsi"> Tulsi</a>
-            <a href="#aloe"> Aloe Vera</a>
-            <a href="#mint"> Peppermint</a>
-            <a href="#grass"> Lemon Grass</a>
-            <a href="#basil"> Basil</a>
-            <a href="#betel"> Betal</a>
-        </nav>
-    
+    <main class="container"> <section id="neem" class="plant-detail-section"> <div class="model-and-info"> <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/03edef8009d942d3a3db6fa64cecbe56/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Neem tree</i></u></h2>
+                    <p>Neem tree (Azadirachta indica) is highly valued for its medicinal properties.</p>     
+                    <ul>
+                        <li><b>Skin Care:</b> Neem leaves and oil are used to treat acne, eczema, and other skin conditions due to their antibacterial and anti-inflammatory properties.</li>
+                        <li><b>Oral Health:</b> Neem sticks and extracts are traditionally used to maintain oral hygiene, prevent gum diseases, and combat bad breath.</li>
+                        <li><b>Antiseptic:</b> Neem paste or oil is applied to wounds and cuts for its antiseptic and healing properties.</li>
+                        <li><b>Digestive Aid:</b> Neem leaf extracts help manage ulcers, indigestion, and intestinal worms.</li>
+                        <li><b>Blood Purification:</b> Neem is believed to detoxify the blood and improve circulation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <!-- <input type="text" id="userQuery" placeholder="Ask about a medicinal plant...">
-<button onclick="askBot()">Ask</button>
-<p id="botResponse"></p>
-
-<script>
-async function askBot() {
-    let query = document.getElementById("userQuery").value;
-    let response = await fetch("/ask-bot", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query })
-    });
-    let data = await response.json();
-    document.getElementById("botResponse").innerText = data.answer;
-}
-</script> -->
-
-       <!-- neem tree -->
-        <div id="neem">
-            <!-- <div> -->
-                <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/03edef8009d942d3a3db6fa64cecbe56/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-                <!-- <img src="/Virtual-Herbal-Garden/neem tree.jpg" alt="Neem Tree" > -->
-            <!-- </div> -->
-                <ul>
-                    <h2><u><i>Neem tree</u></i></h2>
-                <p>Neem tree (Azadirachta indica) is highly valued for its medicinal properties.</p>     
-                
-                    <li><b>Skin Care:</b> Neem leaves and oil are used to treat acne, eczema, and other skin conditions due to their antibacterial and anti-inflammatory properties.</li>
-                    <li><b>Oral Health:</b> Neem sticks and extracts are traditionally used to maintain oral hygiene, prevent gum diseases, and combat bad breath.</li>
-                    <li><b>Antiseptic:</b> Neem paste or oil is applied to wounds and cuts for its antiseptic and healing properties.</li>
-                    <li><b>Digestive Aid:</b> Neem leaf extracts help manage ulcers, indigestion, and intestinal worms.</li>
-                    <li><b>Blood Purification:</b> Neem is believed to detoxify the blood and improve circulation.</li>
-                </ul>
-            
-            
-        </div>
-            <hr width="90%" align="center">
+        <section id="tulsi" class="plant-detail-section">
+            <div class="model-and-info">
+                <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/c604e8f52c234f2e9259d895fe028819/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Tulsi</i></u></h2>
+                    <p>Tulsi (Ocimum sanctum, also called Holy Basil) is revered for its numerous medicinal properties.</p>
+                    <ul>
+                        <li><b>Immunity Booster:</b> Tulsi strengthens the immune system and protects against infections.</li>
+                        <li><b>Respiratory Health:</b> It is used to manage cough, cold, asthma, and other respiratory issues due to its anti-inflammatory and antimicrobial properties.</li>
+                        <li><b>Stress Relief:</b> Tulsi helps reduce stress and anxiety by regulating cortisol levels.</li>
+                        <li><b>Fever and Pain Relief:</b> Known for its antipyretic and analgesic effects, Tulsi is used in managing fevers and mild pain.</li>
+                        <li><b>Digestive Health:</b> Tulsi aids digestion, alleviates bloating, and treats gastrointestinal disorders.</li>
+                    </ul>   
+                </div>
+            </div>
+        </section>
     
-        <!-- tulsi -->
-        <div id="tulsi">
-            <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/c604e8f52c234f2e9259d895fe028819/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-        
-            <!-- <div> -->
-            <!-- <p style="display: inline-block;"> -->
-                <!-- <img src="/Virtual-Herbal-Garden/tulsi.png" alt="Tulsi"> -->
-            <!-- </div> -->
-                <ul>
-                <h2><u><i>Tulsi</u></i></h2>
-                <p>Tulsi (Ocimum sanctum, also called Holy Basil) is revered for its numerous medicinal properties.</p>
-            
-                <li><B>Immunity Booster:</B> Tulsi strengthens the immune system and protects against infections.</li>
-                <li><B>Respiratory Health:</B> It is used to manage cough, cold, asthma, and other respiratory issues due to its anti-inflammatory and antimicrobial properties.</li>
-                <li><B>Stress Relief:</B> Tulsi helps reduce stress and anxiety by regulating cortisol levels.</li>
-                <li><B>Fever and Pain Relief:</B> Known for its antipyretic and analgesic effects, Tulsi is used in managing fevers and mild pain.</li>
-                <li><B>Digestive Health:</B> Tulsi aids digestion, alleviates bloating, and treats gastrointestinal disorders.</li>
-                </ul>   
-                </p>
-        </div>
-        <hr width="90%" align="center">
-    
-        <!-- aloe -->
-        <div id="aloe">
-            <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/66c6699e50ab4863989777f920a981dd/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-            <!-- <div> -->
-                    <!-- <img src="/Virtual-Herbal-Garden/alovera.png" alt="Aloe Vera" > -->
-            <!-- </div> -->
-                <ul>
-                    <h2><u><i>Aloe Vera</u></i></h2>
+        <section id="aloe" class="plant-detail-section">
+            <div class="model-and-info">
+                <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/66c6699e50ab4863989777f920a981dd/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Aloe Vera</i></u></h2>
                     <p>Aloe vera (Aloe barbadensis miller) is widely used for its medicinal and cosmetic benefits.</p>
-                    
+                    <ul>
                         <li><b>Skin Care:</b>Aloe vera gel soothes burns, wounds, and cuts, and is used to treat acne, psoriasis, and eczema.</li>
                         <li><b>Digestive Health:</b>Consuming aloe vera juice can help with constipation, acid reflux, and irritable bowel syndrome (IBS). </li>
                         <li><b>Hydration:</b> Aloe vera is rich in water content, making it excellent for skin hydration and as a natural moisturizer.</li>
                         <li><b>Wound Healing:</b> Its antimicrobial and anti-inflammatory properties accelerate wound healing.</li>
                         <li><b>detoxification:</b> Aloe vera helps detoxify the body by aiding liver function and promoting healthy digestion.</li>
-                </ul>
-        </div>
-         <hr width="90%" align="center">
+                    </ul>
+                </div>
+            </div>
+        </section>
     
-    
-        <div id="mint">
-            <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/f2b2c3e41df0466a94704a64a62e74a9/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-                <!-- <div> -->
-                    <!-- <img src="/Virtual-Herbal-Garden/mint.png" alt="Peppermint"  > -->
-                <!-- </div> -->
-                    <ul>
-                    <h2><u><i> Peppermint</u></i></h2>
+        <section id="mint" class="plant-detail-section">
+            <div class="model-and-info">
+                <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/f2b2c3e41df0466a94704a64a62e74a9/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i> Peppermint</i></u></h2>
                     <p>Peppermint (Mentha piperita) is valued for its medicinal properties.</p>
-                    
+                    <ul>
                         <li><b>Relieves Nausea:</b> Peppermint tea or oil can alleviate nausea and motion sickness.</li>
                         <li><b>Headache Relief:</b>Applying peppermint oil to the temples helps reduce tension headaches.</li>
                         <li><b>Respiratory Support:</b> Its menthol content clears nasal congestion and soothes sore throats.</li>
                         <li><b>Muscle Relaxation:</b> Peppermint oil is used for massaging sore muscles and relieving cramps.</li>
                         <li><b>Anti-inflammatory:</b> It reduces inflammation and soothes irritated skin.</li>
-    
                     </ul>
-        </div>
-         <hr width="90%" align="center">
+                </div>
+            </div>
+        </section>
     
-         <!-- Lemongrass -->
-         <div id="grass">
-            <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/4565bc4142b14e3f8238fbeab8e1e4f3/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-                <!-- <div> -->
-                    <!-- <img src="/Virtual-Herbal-Garden/grass.png" alt="Lemon Grass"  > -->
-                <!-- </div> -->
-                    <ul>
-                    <h2><u><i>Lemon Grass</u></i></h2>
+         <section id="grass" class="plant-detail-section">
+            <div class="model-and-info">
+                <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/4565bc4142b14e3f8238fbeab8e1e4f3/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Lemon Grass</i></u></h2>
                     <p>Lemongrass (Cymbopogon citratus) is widely recognized for its medicinal properties.</p>
-                    
+                    <ul>
                         <li><b>detoxification:</b> It supports liver and kidney function by flushing out toxins from the body.</li>
                         <li><b>Fever Reduction:</b> It is often used in traditional medicine to manage fevers.</li>
                         <li><b>Weight Management:</b> Known to boost metabolism and support weight loss efforts.</li>
                         <li><b>Respiratory Support:</b>: Its essential oil helps clear nasal passages and soothe respiratory issues.</li>
                         <li><b>Blood Pressure Regulation:</b> It may help reduce high blood pressure and improve circulation.</li>
-    
                     </ul>
-        </div>
-         <hr width="90%" align="center">
+                </div>
+            </div>
+        </section>
          
-        <!-- Basil -->
-         <div id="basil">
-            <iframe title="3D Plant Model"
-        
-        src="https://sketchfab.com/models/24eb04654284458e9668b49a706ee16e/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe>
-                <!-- <div> -->
-                    <!-- <img src="/Virtual-Herbal-Garden/basil.png" alt="Basil"  > -->
-                <!-- </div> -->
-                     <ul>
-                    <h2><u><i>Basil</u></i></h2>
+        <section id="basil" class="plant-detail-section">
+            <div class="model-and-info">
+                <div class="plant-model">
+                    <iframe title="3D Plant Model" src="https://sketchfab.com/models/24eb04654284458e9668b49a706ee16e/embed" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Basil</i></u></h2>
                     <p>Krishna Tulsi (Ocimum tenuiflorum, also known as Purple Holy Basil) is revered for its potent medicinal properties.</p>
-                   
+                    <ul>
                         <li><b>Immunity Booster:</b> Enhances immunity and helps combat infections and illnesses.</li>
                         <li><b>Respiratory Health:</b> Effective in treating cough, cold, asthma, and bronchitis due to its antimicrobial properties.</li>
                         <li><b>Stress Relief:</b> Reduces stress and anxiety by balancing cortisol levels and promoting relaxation.</li>
                         <li><b>Diabetes Management:</b> Helps regulate blood sugar levels and improves metabolic functions.</li>
                         <li><b>Heart Health:</b> Supports cardiovascular health by reducing cholesterol and improving circulation.</li>
-    
                     </ul>
-        </div>
-            <hr width="90%" align="center">
+                </div>
+            </div>
+        </section>
          
-        <!-- betel -->
-            <div id="betel">
-                <!--  <iframe title="3D Plant Model"
-        
-       src="https://sketchfab.com/models/03edef8009d942d3a3db6fa64cecbe56/embed"
-        frameborder="0"
-        allow="autoplay; fullscreen; vr"></iframe> -->
-                <!-- <div> -->
-                    <img src="/Virtual-Herbal-Garden/betel.png" alt="Betal" >
-                <!-- </div> -->
-                     <ul> 
-                    <h2><u><i>Betel</u></i></h2>
+        <section id="betel" class="plant-detail-section">
+            <div class="class-and-info"> <div class="plant-model"> <img src="/Virtual-Herbal-Garden/betel.png" alt="Betal" >
+                </div>
+                <div class="plant-info">
+                    <h2><u><i>Betel</i></u></h2>
                     <p>Betel leaves (Piper betle), commonly known as Magai Paan in India, have several medicinal uses.</p>
-                    
+                    <ul> 
                         <li><b>Digestive Aid:</b> Chewing betel leaves stimulates digestive enzymes, aiding digestion and relieving constipation.</li>
                         <li><b>Oral Health:</b> Acts as a natural antiseptic, preventing bad breath, tooth decay, and gum infections.</li>
                         <li><b>Wound Healing:</b> Betel leaves have antimicrobial and anti-inflammatory properties that help in the healing of wounds and cuts.</li>
                         <li><b>Skin Care:</b> Betel leaf juice or paste is applied to treat acne, boils, and skin infections.</li>
-                        <li><b>Pain Relief:</b> Betel leaf paste is used to relieve muscle pain, joint pain, and headaches</li>
-    
+                        <li><b>Pain Relief:</b> Betel leaf paste is used to relieve muscle pain, joint pain, and headaches.</li>
                     </ul>
-        </div>
-    </body>
-    </html>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Virtual Herbal Garden &copy; 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>

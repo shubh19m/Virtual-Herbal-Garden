@@ -1,140 +1,658 @@
- body {
-    font-family: Arial, sans-serif;
+/* General Body and Base Styles */
+body {
+    font-family: 'Open Sans', sans-serif; /* Changed to Open Sans */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #e8f5e9; /* Lighter, more natural green */
     color: #333;
+    line-height: 1.6; /* Improved readability */
 }
+
+.container {
+    width: 90%; /* Slightly wider container */
+    max-width: 1200px; /* Max width to prevent content from stretching too much on large screens */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0; /* Add some padding to container itself */
+}
+
+/* Header Styles */
 header {
-    background-color: #4CAF50;
+    background-color: #388e3c; /* Deeper, more earthy green */
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 2em 0; /* More vertical padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-nav {
+
+header h1 {
+    font-family: 'Merriweather', serif; /* Changed to Merriweather */
     margin: 0;
-    padding: 10px;
-    background-color: #333;
-    text-align: center;
-    
+    font-size: 2.8em; /* Larger, more impactful heading */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Subtle text shadow */
 }
+
+/* Navigation Styles */
+nav {
+    background-color: #2e7d32; /* Even deeper green for contrast */
+    text-align: center;
+    padding: 15px 0; /* More padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex; /* Use flex for nav items and search */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 10px; /* Space between nav items/search */
+}
+
 nav a {
     color: white;
-    padding: 14px 20px;
+    padding: 10px 20px; /* Adjusted padding */
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-} 
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
 nav a:hover {
-    background-color: #ddd;
-    color: #333;
+    background-color: #4caf50;
+    color: #e8f5e9;
 }
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-.content {
-    padding: 20px 0;
-}
-footer {
-    background-color: #333;
-    color: white;
-    /* text-align: center; */
-    padding: 10px 0;
-    /* position: fixed; */
-    width: 100%;
-    bottom: 0; 
-}.contact-form {
+
+/* Nav Search (copied from campus.css updates for consistency) */
+.nav-search {
     display: flex;
-    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding: 0;
 }
-.contact-form input, .contact-form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    max-width: 600px;
+
+.nav-search input {
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    outline: none;
+    flex-grow: 1;
 }
-.contact-form button {
+
+.nav-search .search-icon {
+    padding: 10px 15px;
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
-    border: none;
     cursor: pointer;
-    max-width: 100px;
+    transition: background-color 0.3s ease;
 }
-.contact-form button:hover {
+
+.nav-search .search-icon:hover {
     background-color: #45a049;
 }
 
+/* Content Section Styles (for index.html sections) */
+.content {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-family: 'Merriweather', serif;
+    color: #388e3c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 10px;
+}
+
+.content h3 {
+    font-family: 'Merriweather', serif;
+    color: #558b2f;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    list-style: disc inside;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content ul li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.content a {
+    color: #388e3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    color: #2e7d32;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #c8e6c9;
+    border-radius: 8px;
+    font-size: 1.05em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #66bb6a;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    max-width: 150px;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Feature Boxes (for index.html) */
 .features {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .feature-box {
-    flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row */
-    margin: 10px;
-    background-color: #f9f9f9;
-    padding: 20px;
+    flex: 1 1 calc(33% - 40px);
+    margin: 20px;
+    background-color: #fcfcfc;
+    padding: 30px;
     text-align: left;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .feature-box h3 {
-    margin-bottom: 10px;
+    font-family: 'Merriweather', serif;
+    color: #388e3c;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.feature-box p {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+footer ol {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+footer ol li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+footer ol li a {
+    color: #a5d6a7;
+    text-decoration: none;
+}
+
+footer ol li a:hover {
+    text-decoration: underline;
+    color: #c8e6c9;
+}
+
+/* --- Campus Page Specific Styles --- */
+
+/* Plant Grid Layout (copied from campus.css for consistency) */
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 30px 0;
+}
+
+.plant-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plant-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.plant-card h3 {
+    font-family: 'Merriweather', serif;
+    color: #388e3c;
+    font-size: 1.5em;
+    margin: 15px 15px 10px 15px;
+    text-align: center;
+}
+
+/* --- View Page Specific Styles --- */
+.plant-detail-section {
+    background-color: #ffffff;
+    padding: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plant-detail-section h2 {
+    font-family: 'Merriweather', serif;
+    color: #388e3c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 10px;
+}
+
+.plant-detail-section p,
+.plant-detail-section ul {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.plant-detail-section ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.plant-detail-section ul li {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.model-and-info {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px; /* Space between model and info */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.plant-model {
+    flex: 1 1 45%; /* Takes about 45% of width */
+    min-width: 300px; /* Minimum width for the model/image */
+    background-color: #f0f0f0; /* Light background for iframe area */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure iframe/image respects border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plant-model iframe,
+.plant-model img {
+    width: 100%;
+    height: 400px; /* Fixed height for 3D models/images */
+    display: block; /* Remove extra space below iframe/image */
+    border-radius: 8px; /* Apply to content inside */
+}
+
+.plant-info {
+    flex: 1 1 50%; /* Takes about 50% of width */
+    font-size: 1.05em;
+}
+
+/* Responsive Adjustments (Combined for all pages) */
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 2.2em;
+    }
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    nav a, .nav-search {
+        width: calc(100% - 40px);
+        max-width: 400px;
+        margin: 5px 0;
+    }
+    .plant-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .plant-detail-section {
+        padding: 30px;
+    }
+    .model-and-info {
+        flex-direction: column; /* Stack model and info vertically */
+        gap: 20px;
+    }
+    .plant-model, .plant-info {
+        flex: 1 1 100%; /* Full width for stacked items */
+        min-width: unset; /* Remove min-width when stacked */
+    }
+    .plant-model iframe,
+    .plant-model img {
+        height: 300px; /* Adjust height for smaller screens */
+    }
 }
 
 @media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-    div {
-        /*       */
-        color: rgb(0, 0, 0);
-        padding: 14px 20px;
-        text-decoration: none;
-        /* text-align: center; */
-      
-    }
-    img{
-            
-            width: 50%;
-            height: 50%;
-    }
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-box {
-        flex: 1 1 100%; /* One box per row on small screens */
-        margin: 10px 0;
-    }
-}
-@media (max-width: 480px) {
     header {
-        padding: 15px 0;
+        padding: 1.5em 0;
     }
-
+    header h1 {
+        font-size: 1.8em;
+    }
     nav a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+    .plant-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .plant-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+    .plant-detail-section {
+        padding: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .plant-detail-section h2 {
+        font-size: 1.8em;
+    }
+    .plant-detail-section p,
+    .plant-detail-section ul {
         font-size: 1em;
-        padding: 10px;
+    }
+    footer {
+        padding: 20px 0;
     }
 }
-div {
-    display:flex;
-    color: rgb(0, 0, 0);
-    padding: 14px 20px;
-    text-decoration: none;
-    /* text-align: center; */
 
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+        padding: 0 10px;
+    }
+    .container {
+        padding: 10px 0;
+    }
+    nav a, .nav-search {
+        width: calc(100% - 20px);
+        max-width: none;
+    }
+    .plant-card {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+    .plant-card h3 {
+        font-size: 1.3em;
+    }
+    .plant-detail-section {
+        padding: 20px;
+    }
+    .plant-detail-section h2 {
+        font-size: 1.5em;
+    }
+    .plant-detail-section p,
+    .plant-detail-section ul {
+        font-size: 0.95em;
+    }
+    .plant-model iframe,
+    .plant-model img {
+        height: 250px; /* Smaller height for very small screens */
+    }
+    footer ol {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    footer ol li {
+        font-size: 0.85em;
+    }
 }
-.Vidhya-plant{
-    display:flex;
-    
+/* --- Bookmarks and Notes Specific Styles --- */
+
+.bookmark-icon {
+    font-size: 1.5em; /* Adjust size as needed */
+    color: #ccc; /* Default color (not bookmarked) */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    margin-left: 10px; /* Space from plant name */
+    vertical-align: middle; /* Align with text */
+}
+
+.bookmark-icon.bookmarked {
+    color: #FFD700; /* Gold color for bookmarked */
+}
+
+/* For individual plant pages */
+.plant-detail-section .bookmark-icon {
+    font-size: 1.8em; /* Slightly larger on detail page */
+    margin-left: 15px;
+}
+
+/* For the notes section */
+#plant-note {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#save-note {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#save-note:hover {
+    background-color: #45a049;
+}
+
+.no-bookmarks, .no-results {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Style for bookmark items in My Bookmarks section if using plant-card style */
+#my-bookmarks-list .plant-card {
+    position: relative; /* For positioning the bookmark icon within the card */
+    padding-right: 40px; /* Make space for the icon */
+}
+
+#my-bookmarks-list .plant-card .bookmark-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2em;
+}
+/* --- Login Page Styles --- */
+
+.login-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Adjust as needed */
+    margin: 50px auto; /* Center the form on the page */
+    text-align: center;
+}
+
+.login-section h2 {
+    color: #4CAF50; /* Matches your header color */
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels and inputs to the left within their group */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make button full width */
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.form-links {
+    margin-top: 25px;
+    font-size: 0.95em;
+}
+
+.form-links a {
+    color: #007bff; /* A standard link blue */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.form-links span {
+    margin: 0 10px;
+    color: #aaa;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: red; /* For error messages */
+    /* Add styling for success messages if needed */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .login-section {
+        margin: 20px auto;
+        padding: 30px 20px;
+        width: 90%;
+    }
 }
