@@ -76,7 +76,7 @@ const plantsData = [
         scientificName: 'Aloe barbadensis miller',
         commonNames: ['Aloe'],
         uses: ['Skin Care', 'Digestive Health', 'Hydration', 'Wound Healing', 'Detoxification'],
-        image: '/Virtual-Herbal-Garden/path_to_aloe_image.jpg', // Replace with actual path
+        image: '/Virtual-Herbal-Garden/alovera.png', // Replace with actual path
         htmlFile: '/Virtual-Herbal-Garden/aloe.html' // Assuming you'll create this file
     },
     {
